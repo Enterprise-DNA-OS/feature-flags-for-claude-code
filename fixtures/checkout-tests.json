@@ -1,0 +1,12 @@
+[
+  {
+    "key": "new_checkout",
+    "user": { "identifier": "nz-demo", "country": "NZ" },
+    "expected": true
+  },
+  {
+    "key": "new_checkout",
+    "user": { "identifier": "au-demo", "country": "AU" },
+    "expected": true
+  }
+]

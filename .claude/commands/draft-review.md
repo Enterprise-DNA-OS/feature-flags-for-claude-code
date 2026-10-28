@@ -1,0 +1,15 @@
+---
+description: Draft the weekly flag review for a person to read
+---
+
+# Draft the weekly flag review for a person to read
+
+Read the relevant environment and change history first. Use real records only. Report missing information and list ambiguous matches. Add --json when you need structured output. Never send or deploy anything.
+
+Run:
+
+```bash
+npm run flags -- draft-review
+```
+
+Replace angle-bracket fields with supplied values. Arguments: $ARGUMENTS

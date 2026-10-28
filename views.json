@@ -1,13 +1,36 @@
 [
   {
     "name": "week",
-    "title": "This week",
-    "subtitle": "Feature Flags for Claude Code: what needs attention, rendered by npm run view",
+    "title": "The release week",
     "sections": [
       {
         "title": "Needs attention",
-        "note": "TODO(author): point this at the industry's attention view (overdue, stuck, quiet).",
-        "sql": "select 'replace me' as item, 'TODO(author)' as why"
+        "sql": "select * from attention_items order by environment,issue"
+      },
+      {
+        "title": "Open changes",
+        "sql": "select * from change_queue where state in ('pending','approved') order by due_on"
+      }
+    ]
+  },
+  {
+    "name": "ownership",
+    "title": "Flag ownership",
+    "sections": [
+      {
+        "title": "Active flags",
+        "sql": "select * from flag_inventory order by environment,key"
+      }
+    ]
+  },
+  {
+    "name": "compliance",
+    "title": "Release evidence checks",
+    "sections": [
+      {
+        "title": "Findings",
+        "sql": "select * from compliance_findings order by rule,environment",
+        "note": "Local checks supporting a change-control policy, not a certification."
       }
     ]
   }

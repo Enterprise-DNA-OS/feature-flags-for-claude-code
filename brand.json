@@ -1,10 +1,10 @@
 {
   "_": "Your business on every document and view. Change these and run `npm run docs` or `npm run view`.",
-  "business_name": "Your Business",
+  "business_name": "Kauri Software Demo",
   "logo_path": "",
   "primary": "#6654f5",
   "accent": "#ca5a8b",
   "ink": "#0b0c18",
   "paper": "#ffffff",
-  "footer_line": "Prepared with Feature Flags for Claude Code."
+  "footer_line": "Fictional demonstration. Private working records. Omni by Enterprise DNA."
 }

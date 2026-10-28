@@ -1,24 +1,7 @@
-# Why there is no front end
+# Why no front end
 
-ConfigCat is a database with a subscription. The tables underneath it are ordinary: a few entities, a few relationships, a handful of workflows you repeat every week. What you pay for is the layer on top that lets people who do not write SQL get at those tables. Screens, filters, dashboards, forms.
+A small release team can maintain ownership, proposed configurations, test cases and review evidence through one database and a coding agent. The same records produce weekly HTML reports and release handovers. Custom fields and rules change in the open code instead of waiting for a new subscription tier.
 
-That layer used to be the whole product, because talking to a database was hard. It is not hard any more. Open this folder in Claude Code, describe what you want, and it writes the query, runs it, and explains the answer. Ask a question the dashboard never had a chart for and you still get an answer.
+A graphical control panel gives immediate toggles, visual rule editing and a familiar mobile view. This project has none of those. It also has no hosted configuration delivery, polling service, live telemetry or cross-device offline synchronisation. The embedded database and evaluator can run locally offline after installation; they do not keep two machines in sync. Generated HTML is read-only and can be opened on a phone after you transfer it securely.
 
-## What you gain
-
-- **Better answers.** A dashboard shows what the vendor decided to chart. Here you ask your own question, in your own words, and get it answered against your own data.
-- **No seats.** Everyone who needs to look can look. The bill does not grow with headcount.
-- **Your data in your Postgres.** Plain tables. Back them up, query them from anything, leave any time. There is no export step because there is nothing to leave.
-- **A process that matches you.** When your way of working changes, you add a command. You do not wait for a feature request to clear.
-
-## What you give up
-
-- **A visual board.** Stages are a table you ask about, not cards you drag.
-- **A phone app.** It runs where Claude Code runs.
-- **A vendor help desk.** This is open source. Enterprise DNA supports the installed version for businesses that want someone to call.
-
-## Who this fits
-
-Small teams who already use Claude Code, or who would rather learn to ask than learn another interface. If your team needs a screen to look at all day, keep ConfigCat. If you need the answers more than the screens, this is cheaper, faster and yours.
-
-Installed and run for you: https://enterprisedna.co/omni/instead-of/configcat
+Use this as a working release record and offline configuration evaluator. Integrate live application delivery and authenticated approvals deliberately. Enterprise DNA can build a web interface, connect the existing delivery tools or implement another stack when those are the agreed requirements. No recorded release silently changes an application.

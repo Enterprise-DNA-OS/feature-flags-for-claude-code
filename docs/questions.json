@@ -1,0 +1,42 @@
+[
+  {
+    "ask": "Which flags have no owner and an overdue review?",
+    "command": "attention"
+  },
+  {
+    "ask": "Which change is overdue before its first release?",
+    "command": "changes-due"
+  },
+  {
+    "ask": "Which proposals were prepared against an older revision?",
+    "command": "changes-due"
+  },
+  {
+    "ask": "Which owner has the most reviews due?",
+    "command": "owner-load"
+  },
+  {
+    "ask": "Where do staging and production defaults differ?",
+    "command": "environment-drift"
+  },
+  {
+    "ask": "Which named reviewer approved a change and why?",
+    "command": "decisions"
+  },
+  {
+    "ask": "Did the latest test run fail after an earlier pass?",
+    "command": "test-history"
+  },
+  {
+    "ask": "Which recorded version is available for a rollback proposal?",
+    "command": "releases"
+  },
+  {
+    "ask": "Who changed a flag owner and what was there before?",
+    "command": "activity"
+  },
+  {
+    "ask": "Which imported environment came from this configuration digest?",
+    "command": "imports"
+  }
+]

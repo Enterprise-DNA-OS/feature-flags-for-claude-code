@@ -1,0 +1,37 @@
+{
+  "p": { "r": 0, "s": "fictional-demo-salt" },
+  "s": [
+    {
+      "n": "New Zealand customers",
+      "r": [{ "a": "Country", "c": 0, "l": ["NZ"] }]
+    }
+  ],
+  "f": {
+    "beta": {
+      "t": 0,
+      "v": { "b": false },
+      "r": [{ "c": [{ "s": { "s": 0, "c": 0 } }], "s": { "v": { "b": true } } }]
+    },
+    "headline": { "t": 1, "v": { "s": "Welcome" } },
+    "limit": { "t": 2, "v": { "i": 5 } },
+    "ratio": { "t": 3, "v": { "d": 0.25 } },
+    "dependent": {
+      "t": 0,
+      "v": { "b": false },
+      "r": [
+        {
+          "c": [{ "p": { "f": "beta", "c": 0, "v": { "b": true } } }],
+          "s": { "v": { "b": true } }
+        }
+      ]
+    },
+    "experiment": {
+      "t": 0,
+      "v": { "b": false },
+      "p": [
+        { "p": 50, "v": { "b": true } },
+        { "p": 50, "v": { "b": false } }
+      ]
+    }
+  }
+}

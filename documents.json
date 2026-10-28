@@ -1,11 +1,46 @@
 [
   {
-    "name": "example",
-    "title": "TODO(author): the first document this industry must produce",
-    "for_each": "select gen_random_uuid() as id, 'Example' as name",
+    "name": "environment-register",
+    "title": "Feature flag ownership register",
+    "for_each": "select id,name from environments order by name",
     "file": "name",
     "sections": [
-      { "title": "Details", "sql": "select 'replace me' as item, $1::text as record_id" }
+      {
+        "title": "Environment",
+        "layout": "record",
+        "sql": "select name,owner,revision from environments where id=$1"
+      },
+      {
+        "title": "Active flags",
+        "sql": "select key,owner,purpose,review_on from flag_register where environment_id=$1 and key in (select jsonb_object_keys(document->'f') from environments where id=$1) order by key",
+        "note": "Private operator record. Reconcile with the deployed application separately."
+      },
+      {
+        "title": "Release history",
+        "sql": "select revision,actor,reason,created_at from releases where environment_id=$1 order by revision desc"
+      }
+    ]
+  },
+  {
+    "name": "release-handover",
+    "title": "Release handover",
+    "for_each": "select id,code from changes order by code",
+    "file": "code",
+    "sections": [
+      {
+        "title": "Decision brief",
+        "layout": "record",
+        "sql": "select code,requested_by,reason,impact,rollback_plan,due_on,state from changes where id=$1"
+      },
+      {
+        "title": "Test evidence",
+        "sql": "select actor,passed,results,created_at from checks where change_id=$1 order by created_at"
+      },
+      {
+        "title": "Review decisions",
+        "sql": "select actor,decision,evidence,created_at from decisions where change_id=$1 order by created_at",
+        "note": "Named actors are supplied text, not authenticated signatures. This document does not prove deployment."
+      }
     ]
   }
 ]
